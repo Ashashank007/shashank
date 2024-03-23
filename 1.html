@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage with Logo, Dropdown, and Image Slider</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333; /* border color */
+    object-fit: cover; /* maintain aspect ratio */
+  }
+  .dropdown {
+    margin-right: 20px;
+  }
+  .slider {
+    width: 100%;
+    height: 400px;
+    background: #f0f0f0; /* Art background color */
+    margin-top: 20px;
+    /* Add styles for image slider */
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .dropdown {
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <img class="logo" src="shashank eh.png" alt="Logo">
+  </div>
+  <div class="right">
+    <select class="dropdown" onchange="location = this.value;">
+      <option value="">Select a page</option>
+      <option value="page1.html">Page 1</option>
+      <option value="page2.html">Page 2</option>
+      <option value="page3.html">Page 3</option>
+      <option value="page4.html">Page 4</option>
+      <option value="page5.html">Page 5</option>
+    </select>
+  </div>
+</div>
+</body>
+</html>
