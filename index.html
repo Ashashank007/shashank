@@ -38,11 +38,13 @@
     .container {
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* Align items to the start (top) */
     }
-    .dropdown {
-      margin-top: 20px;
-      margin-right: 0;
+    .left {
+      order: 2; /* Place the logo at the end */
+    }
+    .right {
+      order: 1; /* Place the dropdown at the beginning */
+      margin-bottom: 20px;
     }
   }
 </style>
