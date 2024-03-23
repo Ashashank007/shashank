@@ -38,13 +38,46 @@
     .container {
       flex-direction: column;
       align-items: center;
+      padding: 10px;
     }
-    .left {
-      order: 2; /* Place the logo at the end */
+    .dropdown {
+      margin: 10px 0;
     }
-    .right {
-      order: 1; /* Place the dropdown at the beginning */
-      margin-bottom: 20px;
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+      z-index: 999;
+    }
+    .navbar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
     }
   }
 </style>
@@ -54,91 +87,34 @@
   <div class="left">
     <img class="logo" src="shashank eh.png" alt="Logo">
   </div>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dropdown Menu Bar</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .navbar {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; /* Fixed position */
-    top: 0; /* Position from the top */
-    right: 0; /* Position from the right */
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 20px;
-    background-color: inherit;
-    margin: 0;
-  }
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #ddd;
-    color: black;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-  }
-  .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-</style>
-</head>
-<body>
+  <div class="right">
+    <select class="dropdown" onchange="location = this.value;">
+      <option value="">Select a page</option>
+      <option value="page1.html">Page 1</option>
+      <option value="page2.html">Page 2</option>
+      <option value="page3.html">Page 3</option>
+      <option value="page4.html">Page 4</option>
+      <option value="page5.html">Page 5</option>
+    </select>
+  </div>
+</div>
+
+<div class="slider">
+  <!-- Image slider content -->
+  <!-- You can use JavaScript or a library like Swiper.js to implement the image slider -->
+</div>
 
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
+    <button class="dropdown">Dropdown</button>
     <div class="dropdown-content">
       <a href="#link1">Link 1</a>
       <a href="#link2">Link 2</a>
       <a href="#link3">Link 3</a>
     </div>
   </div> 
-</div>
-</body>
-</html>
-
 </div>
 
 </body>
